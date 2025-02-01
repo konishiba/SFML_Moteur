@@ -30,6 +30,9 @@
     <Filter Include="Script\Utilities\Color">
       <UniqueIdentifier>{744f47f1-da99-4004-a099-14c1fe47a864}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Script\Game">
+      <UniqueIdentifier>{a9742544-dae2-4d21-a255-e8a27c58c762}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -46,6 +49,15 @@
     </ClCompile>
     <ClCompile Include="Utilities.cpp">
       <Filter>Script\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TimerManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +80,15 @@
       <Filter>Script\Utilities</Filter>
     </ClInclude>
     <ClInclude Include="Utilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TimerManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
