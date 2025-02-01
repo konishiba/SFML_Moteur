@@ -9,23 +9,26 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Utilities">
-      <UniqueIdentifier>{138d950d-8a09-43a6-ad48-1bfbf4e3439e}</UniqueIdentifier>
+    <Filter Include="Script">
+      <UniqueIdentifier>{1ed1e192-2b70-4494-877b-a4672df57b75}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Utilities\Logger">
-      <UniqueIdentifier>{b1abebcc-6d38-474a-9d6a-8e91a6aefe12}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object">
+    <Filter Include="Script\Object">
       <UniqueIdentifier>{446136cf-9167-4691-9d91-7486d14b86e5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Manager">
+    <Filter Include="Script\Manager">
       <UniqueIdentifier>{a51f2fd6-1353-4b99-b06e-10783d8887ce}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Utilities\Color">
-      <UniqueIdentifier>{744f47f1-da99-4004-a099-14c1fe47a864}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Manager\Singleton">
+    <Filter Include="Script\Manager\Singleton">
       <UniqueIdentifier>{0f4824bd-d703-4fec-9a67-628e4118858d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Utilities">
+      <UniqueIdentifier>{138d950d-8a09-43a6-ad48-1bfbf4e3439e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Utilities\Logger">
+      <UniqueIdentifier>{b1abebcc-6d38-474a-9d6a-8e91a6aefe12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Utilities\Color">
+      <UniqueIdentifier>{744f47f1-da99-4004-a099-14c1fe47a864}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -33,36 +36,36 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Logger.cpp">
-      <Filter>Utilities\Logger</Filter>
+      <Filter>Script\Utilities\Logger</Filter>
     </ClCompile>
     <ClCompile Include="Object.cpp">
-      <Filter>Object</Filter>
+      <Filter>Script\Object</Filter>
     </ClCompile>
     <ClCompile Include="Color.cpp">
-      <Filter>Utilities\Color</Filter>
+      <Filter>Script\Utilities\Color</Filter>
     </ClCompile>
     <ClCompile Include="Utilities.cpp">
-      <Filter>Utilities</Filter>
+      <Filter>Script\Utilities</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Macro.h">
-      <Filter>Utilities</Filter>
+      <Filter>Script\Utilities</Filter>
     </ClInclude>
     <ClInclude Include="Logger.h">
-      <Filter>Utilities\Logger</Filter>
+      <Filter>Script\Utilities\Logger</Filter>
     </ClInclude>
     <ClInclude Include="Object.h">
-      <Filter>Object</Filter>
+      <Filter>Script\Object</Filter>
     </ClInclude>
     <ClInclude Include="Color.h">
-      <Filter>Utilities\Color</Filter>
+      <Filter>Script\Utilities\Color</Filter>
     </ClInclude>
     <ClInclude Include="Singleton.h">
-      <Filter>Manager\Singleton</Filter>
+      <Filter>Script\Manager\Singleton</Filter>
     </ClInclude>
     <ClInclude Include="CoreMinimal.h">
-      <Filter>Utilities</Filter>
+      <Filter>Script\Utilities</Filter>
     </ClInclude>
     <ClInclude Include="Utilities.h">
       <Filter>Header Files</Filter>
