@@ -1,4 +1,5 @@
 #include "TimerManager.h"
+#include "CoreMinimal.h"
 
 TimerManager::TimerManager()
 {
@@ -35,13 +36,16 @@ void TimerManager::Update()
 		if (_needToBeDestroyed)
 		{
 			_timerToDelete.insert(_timer);
-			Object::Destroy(_timer);
+			G_COLLECTOR.AddToDestroy(_timer);
 		}
 	}
 
 	// Delete Timers in the list if needed
 	for (shared_ptr<Timer> _timer : _timerToDelete)
+	{
 		RemoveTimer(_timer);
+	}
+	_timerToDelete.clear();
 }
 
 void TimerManager::Destroy()
@@ -58,9 +62,9 @@ void TimerManager::UpdateDeltatime()
 
 }
 
-shared_ptr<Timer> TimerManager::SetTimer(const bool _activated, const float _duration, const bool _isRepeated, function<void()> _callback)
+shared_ptr<Timer> TimerManager::SetTimer(const bool _activated, const float _duration, const bool _isRepeated, function<void()> _callback, string _customName)
 {
-	shared_ptr<Timer> _timer = make_shared<Timer>(_activated, _duration, _isRepeated, _callback);
+	shared_ptr<Timer> _timer = make_shared<Timer>(_activated, _duration, _isRepeated, _callback,_customName);
 	allTimers.insert(_timer);
 
 	return _timer;

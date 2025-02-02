@@ -1,8 +1,4 @@
-#include <iostream>
-#include "TimerManager.h"
 #include "Game.h"
-
-using namespace std;
 
 void InitConfig()
 {
@@ -14,9 +10,9 @@ int main()
     InitConfig();
     shared_ptr<Game> _game = make_shared<Game>();
 
-    shared_ptr<Timer> _t = TimerManager::GetInstance().SetTimer(true, 1.0f, false, [&]() { cout << "pd" << endl; });
-
     _game.get()->Start();
+
+    _game.reset();
 
 	return 0;
 }

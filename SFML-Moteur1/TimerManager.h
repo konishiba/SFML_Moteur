@@ -1,5 +1,4 @@
 #pragma once
-#include "CoreMinimal.h"
 #include "Manager.h"
 #include "Object.h"
 
@@ -14,7 +13,7 @@ struct Timer : public Object
 
 	function<void()> callback;
 
-	Timer(const bool _activated, const float _duration, const bool _isRepeated, function<void()> _callback) : Object("timer")
+	Timer(const bool _activated, const float _duration, const bool _isRepeated, function<void()> _callback, string _customName) : Object(_customName)
 	{
 		stopped = true;
 		activated = _activated;
@@ -92,7 +91,7 @@ public:
 
 	void UpdateDeltatime();
 
-	shared_ptr<Timer> SetTimer(const bool _activated, const float _duration, const bool _isRepeated, function<void()> _callback);
+	shared_ptr<Timer> SetTimer(const bool _activated, const float _duration, const bool _isRepeated, function<void()> _callback, string _customName = "timer");
 	void RemoveTimer(shared_ptr<Timer> _timer);
 	void Activate(shared_ptr<Timer> _timer);
 

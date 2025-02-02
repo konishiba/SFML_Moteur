@@ -1,6 +1,5 @@
 #pragma once
 #include "Singleton.h"
-#include "CoreMinimal.h"
 #include "Object.h"
 
 class GarbageCollector : public Singleton<GarbageCollector>
@@ -13,6 +12,6 @@ public:
 public:
 	void AddToDestroy(shared_ptr<Object> _object);
 
-	void DestroyObjects();
+	void DestroyGarbages();
 };
 

@@ -1,7 +1,5 @@
 #include "Game.h"
-#include "TimerManager.h"
-#include "GarbageCollector.h"
-
+#include "CoreMinimal.h"
 
 Game::Game()
 {
@@ -13,6 +11,8 @@ void Game::Start()
 {
     window.create(VideoMode({ 800, 400 }), "Angry");
     
+    M_TIMER.SetTimer(true, 0.5f, false, [&]() {cout << "PD" << endl; },"test PD timer");
+
     InitGarbageCollector();
 
     Update();
@@ -21,7 +21,7 @@ void Game::Start()
 void Game::InitGarbageCollector()
 {
     GarbageCollector* _GC = &GarbageCollector::GetInstance();
-    M_TIMER.SetTimer(true, 2.0f, true, [_GC]() {_GC->DestroyObjects(); });
+    M_TIMER.SetTimer(true, 2.0f, true, [_GC]() {_GC->DestroyGarbages(); });
 }
 
 bool Game::Update()
@@ -53,3 +53,4 @@ void Game::Stop()
 {
     
 }
+

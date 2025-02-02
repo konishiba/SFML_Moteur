@@ -15,7 +15,7 @@ public:
 	Object(string _name);
 
 public :
-	static void Destroy(shared_ptr<Object> _obj);
+	
 
 };
 
