@@ -7,7 +7,7 @@ Object::Object(string _name)
 	name = _name += "_" + to_string(ID);
 }
 
-void Object::Destroy()
+void Object::Destroy(shared_ptr<Object> _obj)
 {
-	//GarbageCollector::GetInstance().AddToDestroy(self);
+	GarbageCollector::GetInstance().AddToDestroy(_obj);
 }

@@ -14,7 +14,7 @@ int main()
     InitConfig();
     shared_ptr<Game> _game = make_shared<Game>();
 
-    TimerManager::GetInstance().SetTimer(true, 1.0f, false, [&]() { cout << "pd" << endl; });
+    shared_ptr<Timer> _t = TimerManager::GetInstance().SetTimer(true, 1.0f, false, [&]() { cout << "pd" << endl; });
 
     _game.get()->Start();
 

@@ -77,13 +77,6 @@ public:
 
 		return _date + " " + _time;
 	}
-	inline shared_ptr<Timer> SetTimer(const bool _activated, const float _duration, const bool _isRepeated, function<void()> _callback)
-	{
-		shared_ptr<Timer> _timer = make_shared<Timer>(_activated, _duration, _isRepeated, _callback);
-		allTimers.insert(_timer);
-
-		return _timer;
-	}
 	inline float GetDeltaTime() const
 	{ 
 		return deltaTime; 
@@ -99,16 +92,12 @@ public:
 
 	void UpdateDeltatime();
 
-	void ResumeTimers();
+	shared_ptr<Timer> SetTimer(const bool _activated, const float _duration, const bool _isRepeated, function<void()> _callback);
+	void RemoveTimer(shared_ptr<Timer> _timer);
+	void Activate(shared_ptr<Timer> _timer);
 
+	void ResumeTimers();
 	void StopTimers();
 
-	void Activate(shared_ptr<Timer> _timer)
-	{
-		if (!allTimers.contains(_timer)) return;
-
-		set<shared_ptr<Timer>>::iterator _it = allTimers.find(_timer);
-		_it->get()->activated = true;
-	}
 };
 

@@ -24,14 +24,24 @@ void TimerManager::Update()
 
 	UpdateDeltatime();
 
+	set<shared_ptr<Timer>> _timerToDelete = set<shared_ptr<Timer>>();
+
+	// Update of Timers
 	for (shared_ptr<Timer> _timer : allTimers)
 	{
 		Timer* _temp = _timer.get();
 		bool _needToBeDestroyed = _temp->Update(deltaTime);
 
 		if (_needToBeDestroyed)
-			_temp->Destroy();
+		{
+			_timerToDelete.insert(_timer);
+			Object::Destroy(_timer);
+		}
 	}
+
+	// Delete Timers in the list if needed
+	for (shared_ptr<Timer> _timer : _timerToDelete)
+		RemoveTimer(_timer);
 }
 
 void TimerManager::Destroy()
@@ -46,6 +56,29 @@ void TimerManager::UpdateDeltatime()
 	elapsedTime = time - lastTime;
 	deltaTime = elapsedTime * timeScale;
 
+}
+
+shared_ptr<Timer> TimerManager::SetTimer(const bool _activated, const float _duration, const bool _isRepeated, function<void()> _callback)
+{
+	shared_ptr<Timer> _timer = make_shared<Timer>(_activated, _duration, _isRepeated, _callback);
+	allTimers.insert(_timer);
+
+	return _timer;
+}
+
+void TimerManager::RemoveTimer(shared_ptr<Timer> _timer)
+{
+	if (!allTimers.contains(_timer)) return;
+
+	allTimers.erase(_timer);
+}
+
+void TimerManager::Activate(shared_ptr<Timer> _timer)
+{
+	if (!allTimers.contains(_timer)) return;
+
+	set<shared_ptr<Timer>>::iterator _it = allTimers.find(_timer);
+	_it->get()->activated = true;
 }
 
 void TimerManager::ResumeTimers()
