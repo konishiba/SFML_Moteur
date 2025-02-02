@@ -5,8 +5,12 @@ class Object
 {
 	u_int ID;
 	string name;
-	bool destroy;
 
+public:
+	inline string GetObjectName()
+	{
+		return name;
+	}
 public:
 	Object(string _name);
 

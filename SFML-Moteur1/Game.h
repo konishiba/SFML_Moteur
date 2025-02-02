@@ -21,7 +21,10 @@ public:
 
 public:
 	virtual void Start();
+	void InitGarbageCollector();
+
 	virtual bool Update();
-	void UpdateWindow();
 	virtual void Stop();
+
+	void UpdateWindow();
 };

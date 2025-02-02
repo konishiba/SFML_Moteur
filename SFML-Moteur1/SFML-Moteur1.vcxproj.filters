@@ -33,6 +33,15 @@
     <Filter Include="Script\Game">
       <UniqueIdentifier>{a9742544-dae2-4d21-a255-e8a27c58c762}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Script\Manager\TimerManager">
+      <UniqueIdentifier>{31da0fe7-0941-4e93-a7c6-8a161e592db1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Utilities\Utilities">
+      <UniqueIdentifier>{c0242c52-7367-4e76-8055-e16c3cd27af0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Manager\GarbageCollector">
+      <UniqueIdentifier>{3d1e02ad-1450-44f7-b0a0-bc461635958f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -47,17 +56,17 @@
     <ClCompile Include="Color.cpp">
       <Filter>Script\Utilities\Color</Filter>
     </ClCompile>
-    <ClCompile Include="Utilities.cpp">
-      <Filter>Script\Utilities</Filter>
-    </ClCompile>
-    <ClCompile Include="Manager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="TimerManager.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Script\Manager\TimerManager</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Script\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities.cpp">
+      <Filter>Script\Utilities\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="GarbageCollector.cpp">
+      <Filter>Script\Manager\GarbageCollector</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -79,17 +88,20 @@
     <ClInclude Include="CoreMinimal.h">
       <Filter>Script\Utilities</Filter>
     </ClInclude>
-    <ClInclude Include="Utilities.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Manager.h">
-      <Filter>Header Files</Filter>
+      <Filter>Script\Manager</Filter>
     </ClInclude>
     <ClInclude Include="TimerManager.h">
-      <Filter>Header Files</Filter>
+      <Filter>Script\Manager\TimerManager</Filter>
     </ClInclude>
     <ClInclude Include="Game.h">
-      <Filter>Header Files</Filter>
+      <Filter>Script\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities.h">
+      <Filter>Script\Utilities\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="GarbageCollector.h">
+      <Filter>Script\Manager\GarbageCollector</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
