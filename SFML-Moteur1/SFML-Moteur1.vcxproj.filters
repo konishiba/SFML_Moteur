@@ -42,6 +42,15 @@
     <Filter Include="Script\Manager\GarbageCollector">
       <UniqueIdentifier>{3d1e02ad-1450-44f7-b0a0-bc461635958f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Script\Object\Actor">
+      <UniqueIdentifier>{4082c2ef-3e53-463e-a4dc-6d1d1d62c03e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Component">
+      <UniqueIdentifier>{9d091eaa-3c82-4a24-a946-a467e8bdc4c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Component\RootComponent">
+      <UniqueIdentifier>{bb0d8bcb-c870-499c-a02f-9cf3c7ea3c2d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -67,6 +76,18 @@
     </ClCompile>
     <ClCompile Include="GarbageCollector.cpp">
       <Filter>Script\Manager\GarbageCollector</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor.cpp">
+      <Filter>Script\Object\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Script\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="ActorTransform.cpp">
+      <Filter>Script\Object\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="RootComponent.cpp">
+      <Filter>Script\Component\RootComponent</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -102,6 +123,18 @@
     </ClInclude>
     <ClInclude Include="GarbageCollector.h">
       <Filter>Script\Manager\GarbageCollector</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>Script\Object\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Script\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="ActorTransform.h">
+      <Filter>Script\Object\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="RootComponent.h">
+      <Filter>Script\Component\RootComponent</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

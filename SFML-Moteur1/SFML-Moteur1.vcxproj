@@ -140,17 +140,23 @@ xcopy /y /d "..\..\SFML-3.0.0\bin\sfml-window-d-3.dll" "$(OutDir)"
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Actor.cpp" />
     <ClCompile Include="Color.cpp" />
+    <ClCompile Include="Component.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GarbageCollector.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Object.cpp" />
+    <ClCompile Include="RootComponent.cpp" />
     <ClCompile Include="TimerManager.cpp" />
+    <ClCompile Include="ActorTransform.cpp" />
     <ClCompile Include="Utilities.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Actor.h" />
     <ClInclude Include="Color.h" />
+    <ClInclude Include="Component.h" />
     <ClInclude Include="CoreMinimal.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GarbageCollector.h" />
@@ -158,8 +164,10 @@ xcopy /y /d "..\..\SFML-3.0.0\bin\sfml-window-d-3.dll" "$(OutDir)"
     <ClInclude Include="Macro.h" />
     <ClInclude Include="Manager.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="RootComponent.h" />
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="TimerManager.h" />
+    <ClInclude Include="ActorTransform.h" />
     <ClInclude Include="Utilities.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
