@@ -17,13 +17,5 @@ int main()
 
     _game.reset();
 
-    //Actor _ac = Actor();
-    //shared_ptr<RootComponent> _root = make_shared<RootComponent>();
-
-    //_ac.AddComponent(_root);
-
-    //shared_ptr<RootComponent> _pd = _ac.GetComponent<RootComponent>();
-
-
 	return 0;
 }

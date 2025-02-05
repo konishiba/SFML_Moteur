@@ -25,7 +25,7 @@ struct Timer : public Object
 		callback = _callback;
 	}
 
-	bool Update(float _deltaTime)
+	virtual bool Update(float _deltaTime) override
 	{
 		if (!stopped || !activated) return false;
 

@@ -9,7 +9,7 @@ class Actor : public Object
 	shared_ptr<ActorTransform> transform;
 	set<shared_ptr<Component>> components;
 
-	weak_ptr<Actor> parent;
+	weak_ptr<Actor> parent;	
 	set<shared_ptr<Actor>> childrens;
 
 protected:
@@ -28,13 +28,13 @@ public:
 	template<class T>
 	shared_ptr<T> GetComponent()
 	{
-		//for (shared_ptr<Component> _component : components)
-		//{
-		//	if (T* _cast = dynamic_cast<T*>(_component.get()))
-		//	{
-		//		return make_shared<T>(_cast);
-		//	}
-		//}
+		for (shared_ptr<Component> _component : components)
+		{
+			if (shared_ptr<T> _cast = dynamic_pointer_cast<T>(_component))
+			{				
+				return _cast;
+			}
+		}
 		return nullptr;
 	}
 
