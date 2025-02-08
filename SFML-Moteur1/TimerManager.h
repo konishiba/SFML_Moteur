@@ -25,6 +25,10 @@ struct Timer : public Object
 		callback = _callback;
 	}
 
+	virtual void Start() override
+	{
+
+	}
 	virtual bool Update(float _deltaTime) override
 	{
 		if (!stopped || !activated) return false;
@@ -39,6 +43,11 @@ struct Timer : public Object
 		}
 
 		return false;
+	}
+
+	virtual void Stop() override
+	{
+
 	}
 };
 

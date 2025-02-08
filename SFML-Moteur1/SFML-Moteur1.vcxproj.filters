@@ -51,6 +51,9 @@
     <Filter Include="Script\Component\RootComponent">
       <UniqueIdentifier>{bb0d8bcb-c870-499c-a02f-9cf3c7ea3c2d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Script\Manager\ActorManager">
+      <UniqueIdentifier>{fb0adbb6-008a-4dd2-9fbf-95560a086474}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -83,11 +86,14 @@
     <ClCompile Include="Component.cpp">
       <Filter>Script\Component</Filter>
     </ClCompile>
+    <ClCompile Include="RootComponent.cpp">
+      <Filter>Script\Component\RootComponent</Filter>
+    </ClCompile>
     <ClCompile Include="ActorTransform.cpp">
       <Filter>Script\Object\Actor</Filter>
     </ClCompile>
-    <ClCompile Include="RootComponent.cpp">
-      <Filter>Script\Component\RootComponent</Filter>
+    <ClCompile Include="ActorManager.cpp">
+      <Filter>Script\Manager\ActorManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -130,11 +136,14 @@
     <ClInclude Include="Component.h">
       <Filter>Script\Component</Filter>
     </ClInclude>
+    <ClInclude Include="RootComponent.h">
+      <Filter>Script\Component\RootComponent</Filter>
+    </ClInclude>
     <ClInclude Include="ActorTransform.h">
       <Filter>Script\Object\Actor</Filter>
     </ClInclude>
-    <ClInclude Include="RootComponent.h">
-      <Filter>Script\Component\RootComponent</Filter>
+    <ClInclude Include="ActorManager.h">
+      <Filter>Script\Manager\ActorManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

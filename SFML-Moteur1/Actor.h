@@ -39,5 +39,10 @@ public:
 	}
 
 	void AddComponent(shared_ptr<Component> _component);
+
+public:
+	virtual void Start() override;
+	virtual bool Update(float _deltaTime) override;
+	virtual void Stop();
 };
 

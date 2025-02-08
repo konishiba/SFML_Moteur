@@ -27,4 +27,5 @@ public:
 	virtual void Stop();
 
 	void UpdateWindow();
+	void DrawElement();
 };

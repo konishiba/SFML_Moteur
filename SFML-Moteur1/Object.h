@@ -6,6 +6,9 @@ class Object
 	u_int ID;
 	string name;
 
+protected:
+	bool isUpdated;
+
 public:
 	inline string GetObjectName()
 	{
@@ -20,4 +23,3 @@ public :
 	virtual void Stop() = 0;
 
 };
-

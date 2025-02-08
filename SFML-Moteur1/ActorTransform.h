@@ -3,12 +3,12 @@
 
 class ActorTransform
 {
-	Vector2f location;
+	Vector2f localLocation;
 	Vector2f scale;
 	float rotation;
 	
 public:
-	inline Vector2f GetLocalLocation() const { return location; }
+	inline Vector2f GetLocalLocation() const { return localLocation; }
 	inline Vector2f GetScale() const { return scale; }
 	inline float GetRotation() const { return rotation; }
 

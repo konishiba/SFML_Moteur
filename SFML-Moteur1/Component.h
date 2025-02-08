@@ -9,12 +9,11 @@ class Component : public Object
 	weak_ptr<Actor> owner;
 
 public:
-	Component(const string& _name) : Object(_name)
-	{
+	Component(const string& _name);
 
-	}
-	virtual void Start() = 0;
-	virtual bool Update(float _deltaTime) = 0;
-	virtual void Stop() = 0;
+public:
+	virtual void Start() override;
+	virtual bool Update(float _deltaTime) override;
+	virtual void Stop() override;
 };
 

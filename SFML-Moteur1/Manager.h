@@ -5,7 +5,13 @@ template<class T>
 class Manager : public Singleton<T>
 {
 protected:
-	bool isUpdated = true;
+	bool isUpdated;
+
+public:
+	Manager()
+	{
+		isUpdated = true;
+	}
 
 public:
 	virtual void Start() = 0;

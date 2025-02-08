@@ -1,11 +1,12 @@
 #include "Game.h"
 #include "CoreMinimal.h"
+#include "RootComponent.h"
+#include "Actor.h"
 
 Game::Game()
 {
     window = RenderWindow();
 }
-
 
 void Game::Start()
 {
@@ -45,8 +46,22 @@ bool Game::Update()
 void Game::UpdateWindow()
 {
     window.clear(Color::Black);
+    DrawElement();
     //window.draw();
     window.display();
+}
+
+void Game::DrawElement()
+{
+    set<shared_ptr<Actor>> _actors = M_ACTOR.GetAllActors();
+
+    for (shared_ptr<Actor> _actor : _actors)
+    {
+        shared_ptr<RootComponent> _root = _actor->GetComponent<RootComponent>();
+        if (!_root) continue;
+
+        window.draw(*_root->GetShape());
+    }
 }
 
 void Game::Stop()

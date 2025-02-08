@@ -36,7 +36,7 @@ void TimerManager::Update()
 		if (_needToBeDestroyed)
 		{
 			_timerToDelete.insert(_timer);
-			G_COLLECTOR.AddToDestroy(_timer);
+			DestroyObject(_timer);
 		}
 	}
 
